@@ -89,6 +89,27 @@
     </div>
   </div>
 </div>
+  <body>
+    <div id="marquee">
+        <div id="text">Selamat datang di website kami! Nikmati pengalaman terbaik.</div>
+    </div>
+
+    <script>
+        const text = document.getElementById('text');
+        let position = window.innerWidth;
+
+        function scrollText() {
+            position--;
+            if (position < -text.offsetWidth) {
+                position = window.innerWidth;
+            }
+            text.style.transform = `translateX(${position}px)`;
+            requestAnimationFrame(scrollText);
+        }
+
+        scrollText();
+    </script>
+</body>
 
 
     <!-- Optional JavaScript -->
@@ -102,6 +123,7 @@
   </body>
 
 </html>
+
 
 
 
