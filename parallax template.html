@@ -30,21 +30,13 @@
 
 
   
-<div class="carousel carousel-slider center">
-  
-   <a class="carousel-item" href="#one!"><img src="background1.jpg"></a>
-   
+ <div class="carousel">
+    <a class="carousel-item" href="#one!"><img src="portfolio-details-1.jpg"></a>
+    <a class="carousel-item" href="#two!"><img src="portfolio-details-2.jpg"></a>
+    <a class="carousel-item" href="#three!"><img src="portfolio-details-3.jpg"></a>
+    <a class="carousel-item" href="#four!"><img src="portfolio-7"></a>
+    <a class="carousel-item" href="#five!"><img src="portfolio-8"></a>
   </div>
-  <div class="carousel-item amber white-text" href="#two!">
-    <img src="background1.jpg">
-      </div>
-  <div class="carousel-item green white-text" href="#three!">
-    <img src="background2.jpg">
-  </div>
-  <div class="carousel-item blue white-text" href="#four!">
-    <img src="background3.jpg">
-  </div>
-</div>
 
 
   <div id="index-banner" class="parallax-container">
@@ -196,6 +188,18 @@
   });
         const instance = M.Carousel.getInstance(elem);
   </script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.carousel');
+    var instances = M.Carousel.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.carousel').carousel();
+  });
+  </script>  
 
   
 
